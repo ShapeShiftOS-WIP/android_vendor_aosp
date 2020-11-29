@@ -1,6 +1,8 @@
 # Set all versions
 CUSTOM_BUILD_TYPE ?= UNOFFICIAL
 
+SSOS_BASE_VERSION = 1.3-Moltres
+
 CUSTOM_DATE_YEAR := $(shell date -u +%Y)
 CUSTOM_DATE_MONTH := $(shell date -u +%m)
 CUSTOM_DATE_DAY := $(shell date -u +%d)
@@ -13,12 +15,12 @@ CUSTOM_PLATFORM_VERSION := 11.0
 
 TARGET_PRODUCT_SHORT := $(subst aosp_,,$(CUSTOM_BUILD))
 
-CUSTOM_VERSION := PixelExperience_$(CUSTOM_BUILD)-$(CUSTOM_PLATFORM_VERSION)-$(CUSTOM_BUILD_DATE)-BETA-$(CUSTOM_BUILD_TYPE)
-CUSTOM_VERSION_PROP := eleven
+CUSTOM_VERSION := ShapeShiftOS_$(SSOS_BASE_VERSION)_$(CUSTOM_BUILD)-$(CUSTOM_PLATFORM_VERSION)-$(CUSTOM_BUILD_DATE)-$(CUSTOM_BUILD_TYPE)
+CUSTOM_VERSION_PROP := android_11
 
 CUSTOM_PROPERTIES := \
-    org.pixelexperience.version=$(CUSTOM_VERSION_PROP) \
-    org.pixelexperience.version.display=$(CUSTOM_VERSION) \
-    org.pixelexperience.build_date=$(CUSTOM_BUILD_DATE) \
-    org.pixelexperience.build_date_utc=$(CUSTOM_BUILD_DATE_UTC) \
-    org.pixelexperience.build_type=$(CUSTOM_BUILD_TYPE)
+    org.ssos.version=$(SSOS_BASE_VERSION) \
+    org.ssos.version.display=$(CUSTOM_VERSION) \
+    org.ssos.build_date=$(CUSTOM_BUILD_DATE) \
+    org.ssos.build_date_utc=$(CUSTOM_BUILD_DATE_UTC) \
+    org.ssos.build_type=$(CUSTOM_BUILD_TYPE)
